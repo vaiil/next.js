@@ -25,7 +25,6 @@ export function getRouteRegex(
   const groupNames = Object.keys(groups)
   const lastGroup = groupNames[groupNames.length - 1]
   if (lastGroup && lastGroup[lastGroup.length - 1] === '*') {
-    console.log(lastGroup)
     parameterizedRoute =
       parameterizedRoute.slice(0, parameterizedRoute.lastIndexOf('([^/]+?)')) +
       '(.*)'
